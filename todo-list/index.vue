@@ -8,10 +8,10 @@ let id = 0;
 const newTodo = ref("");
 const todoItems = ref([]); 
 
-const addNewTodo = () => {
+const addTodo = () => {
   const val = newTodo.value;
   if(!val){
-    alert("這個代辦事項是要處理寂寞嗎？");
+    alert("這個代辦事項是要處理寂寞嗎？(請輸入有效內容)");
     return;
   }
   todoItems.value.push(createNewTodoItem(val));
@@ -58,7 +58,7 @@ const getTodoDoneElementId = (id) => `todoDone-${id}`;
       <button v-on:click="delTodo(item.id)" style="width: fit-content;" type="button">X</button>
     </li>
   </ul>
-  <div v-if="!todoItems.length">耶！今天沒有代辦！</div>
+  <div v-if="!todoItems.length">你今天超棒的，沒有任何代辦要處理唷！</div>
 </template>
 
 <!--
