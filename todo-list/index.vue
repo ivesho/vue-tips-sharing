@@ -15,12 +15,14 @@ const addTodo = () => {
     return;
   }
   todoItems.value.push(createNewTodoItem(val));
-
+  
   newTodo.value = "";
 }
 
 const createNewTodoItem = (textVal) => ({id:id++, text:textVal, isDone:false});
-
+  //您好，我想請問我有發現您的程式碼都是以const作為起始點，就連設定function也是，請問這樣的設定會有影響效能或是只是一種編碼習慣呢?
+  //為何要另外將.push後的函式另外const createNewTodoItem出來寫呢?是為了簡化嗎?還是另有其他目的?(20250502)
+  
 // 為什麼要用過濾方式來做？
 // 如果用刪除的邏輯，會需要先找到該筆項目的索引(index)
 // 然後再透過 index 操作 splice，例如：todoItems.value.splice(index, 1);
@@ -75,6 +77,7 @@ const getTodoDoneElementId = (id) => `todoDone-${id}`;
 2. 刪除代辦：
    - 每筆資料都有對應的 id
    - 呼叫 `delTodo(id)` 時，透過 `.filter` 建立新陣列排除該項目
+      - 請問這邊為何要特地指定delTodo的id? 如果單純指向物件，也同樣會刪除該項目的話，我不太理解指定成id的用意
 
 3. 標記完成：
    - 勾選 checkbox 綁定 `item.isDone`
