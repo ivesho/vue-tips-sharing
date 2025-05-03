@@ -1,6 +1,6 @@
 # Todo 教學補充問答紀錄（2025/05/02）
 
-本篇整理自 PR [#1](https://github.com/ivesho/vue-tips-sharing/pull/1) 中學生提出的問題與註解，  
+本篇整理自 PR [#1](https://github.com/ivesho/vue-tips-sharing/pull/1) 中提出的問題與註解，  
 針對 Vue `<script setup>` 中的函式宣告方式、資料刪除邏輯等進行補充說明。
 
 ---
