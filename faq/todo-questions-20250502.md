@@ -29,7 +29,7 @@ todoItems.value.push(createNewTodoItem(val));
 const createNewTodoItem = (textVal) => ({id:id++, text:textVal, isDone:false});
 ```
 
-###解釋：
+### 解釋：
 將它抽出成具名函式有三個好處：
 
 可讀性提升：看到 `createNewTodoItem()` 就知道這是「建立項目」的動作
