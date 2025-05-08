@@ -31,7 +31,7 @@
 - localStorage 資料快取
 - 分頁 / 捲動顯示等資料處理技巧
 
-詳細內容請參考 [教學說明.md]([https://markdown.com.cn](https://github.com/ivesho/vue-tips-sharing/blob/main/youbike-ajax-demo/%E6%95%99%E5%AD%B8%E8%AA%AA%E6%98%8E.md)
+詳細內容請參考 [教學說明.md](https://github.com/ivesho/vue-tips-sharing/blob/main/youbike-ajax-demo/%E6%95%99%E5%AD%B8%E8%AA%AA%E6%98%8E.md)
 
 ---
 
