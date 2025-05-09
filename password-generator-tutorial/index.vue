@@ -163,6 +163,8 @@ watch(form, () => {
     hint.value = ''
   }
 }, { deep: true })
+  //請問這個{ deep: true } 是因為接下來使用者的操作都會進行深拷貝，所以才要監聽嗎?
+  //這樣監聽的結果會返還資料回來嗎? 我們會需要這筆資料接續著進行什麼操作嗎?
 
 const generatePassword = () => {
   const { length, upper, lower, symbol, number } = form.value;  // 參考：詳解1
@@ -172,6 +174,9 @@ const generatePassword = () => {
     alert(`密碼設定長度 ${length}，但規則需求長度 ${minRequired}。請重新確認。`);
     return;
   }
+  // 請問這個alert是什麼時候會啟用呢?
+  // 因為我如果將minRequired的字數大於length的時候，會觸發`X 規則需求總長 ${minRequired} 已超過設定長度 ${length}`
+  // 而且 generatePassword 按鈕此時也會失效，無法觸擊
 
   let resultArr = [];
 
