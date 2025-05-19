@@ -29,7 +29,9 @@ const openDetailModal = (msg_id) => {
     alert("這個留言，很像不存在欸？");
     return;
   }
-
+  //請問，上方這個設定是假設錯誤發生時會出現的內容嗎?
+  //因為如果沒有可以選擇的查看詳情，好像也不會觸擊到一則不存在的留言
+  //意思是在有可能會出現錯誤的環節，我是否都會需要先製作一個如果錯誤發生時的顯示狀況?
   showDetailModal.value = true
 }
 
@@ -49,6 +51,8 @@ const submitNewMessage = () => {
     alert("請填寫完整留言喔～")
     return
   }
+  //我發現使用form的時候, 這個alert並不會出現, 而是出現它預設的樣子
+  //是否通常會去改變它的預設狀態, 而不是使用alert?
   const newId = messages.value.length + 1
   messages.value.push({
     id: newId,
@@ -80,8 +84,10 @@ const submitNewMessage = () => {
     <Modal
       :visible="showDetailModal"
       :showCloseX="false"
-      @close="showDetailModal = false"
+      @close="showDetailModal = false" 
     >
+      <!--請問@close="showDetailModal = false"這個是按到誰的時候會關閉? 為什麼是將@click設置在這?-->
+      <!--我明白子組件有設定的emit, 但我不理解的是@click為什麼不是設置在button-->
       <template #header>
         <h3>留言詳情</h3>
       </template>
