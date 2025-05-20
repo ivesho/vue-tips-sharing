@@ -20,6 +20,9 @@ const props = defineProps({
     type: Boolean,
     default: true
   }
+  // 請問這個closeOnBackdropClick, 是點開新增留言等視窗的時候會出現的深色背景對嗎？
+  // 沒有看到它在哪裡被使用, 請問它是怎麼跟著按鈕顯示的?
+  // 還是說我按下按鈕的那一刻, 就觸發prop內容的這三塊變為true或false?
 })
 
 const emit = defineEmits(['close'])
@@ -33,6 +36,7 @@ const handleBackdropClick = () => {
     close()
   }
 }
+// 這邊我理解是關閉視窗時, 可以透過點擊深色背景操控的內容
 </script>
 
 <template>
